@@ -21,11 +21,28 @@ pip install -r requirements.txt
 ```
 
 3. Get an API key from [OpenWeatherMap](https://openweathermap.org/api) (free tier available)
+   - Note: New API keys may take up to 24 hours to activate
 
-4. Add your API key to the `main.py` file:
-```python
-API_KEY = "your_openweathermap_api_key"
-```
+4. Set up environment variables for API key (recommended method):
+   - Create a `.env` file in the project directory
+   - Add your API key to the file:
+   ```
+   OPENWEATHER_API_KEY=your_openweathermap_api_key
+   ```
+   - Add `.env` to your `.gitignore` file to prevent committing sensitive data
+
+5. Update `main.py` to use the environment variable:
+   ```python
+   # Add these imports at the top
+   import os
+   from dotenv import load_dotenv
+   
+   # Load environment variables
+   load_dotenv()
+   
+   # Replace the API_KEY line with
+   API_KEY = os.getenv("OPENWEATHER_API_KEY")
+   ```
 
 ## Integration with Claude Desktop
 
@@ -263,6 +280,11 @@ If the MCP server is not working in Claude Desktop:
 4. Check that all dependencies are installed
 5. Try restarting Claude Desktop
 6. Check logs for any error messages
+
+### Common API Issues
+- **API Key Activation**: New OpenWeatherMap API keys may take up to 24 hours to activate
+- **Invalid API Key Error**: If you get a 401 error, verify your API key is correct and active
+- **Rate Limiting**: Free tier allows up to 60 calls per minute, which might be exceeded during heavy usage
 
 ## Rate Limits
 
