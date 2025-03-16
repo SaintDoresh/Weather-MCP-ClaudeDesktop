@@ -2,6 +2,11 @@
 
 An MCP (Model Context Protocol) tool that provides real-time weather data, forecasts, and historical weather information using the OpenWeatherMap API, specifically designed for Claude Desktop.
 
+## Tutorial
+
+For a detailed guide on setting up and using this tool, check out our comprehensive Medium tutorial:
+[Tutorial: Using Claude Desktop with Weather MCP Tool to Access Real-Time Weather Data Worldwide](https://medium.com/@saintdoresh/tutorial-using-claude-desktop-with-weather-mcp-tool-to-access-real-time-weather-data-worldwide-a0b811fc5cdf)
+
 ## Features
 
 - Real-time weather conditions for any location
@@ -261,6 +266,8 @@ You can ask Claude Desktop questions like:
 - "How was the weather in Paris on March 14th?"
 - "Search for locations named 'Tokyo'"
 - "Are there any weather alerts for Miami?"
+- "Compare the current weather in Chicago, Miami, and Seattle"
+- "Show me a comparison of air quality in Beijing, Los Angeles, and Delhi"
 
 ## Error Handling
 
